@@ -15,6 +15,7 @@
     "postinstall": "bower install",
     "start": "gulp serve",
     "start:prod": "cross-env BUILD_ENV=production gulp serve",
+    "resize_img": "mogrify -format jpg images/people/*.png && rm images/people/*.png && sips -Z 400 images/people/*.jpg",
     "lint": "gulp lint",
     "pretest": "npm run lint",
     "test": "echo \"No tests\""
